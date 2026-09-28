@@ -1,22 +1,50 @@
 <?php namespace ProcessWire;
+include './includes/head.inc.php';
+include './includes/header.inc.php';
+?>
+<div id="wrapper-content">
+    <div class="main-content">
+        <?php include './includes/breadcrumb.inc.php'; ?>
+        
+        <section class="about-us-wrapper padding-top-50 padding-bottom-50">
+            <div class="container">
+                <?php if ($page->page_subtitle): ?>
+                    <div class="typo-line">
+                        <h4 class="sub-header"><?= htmlspecialchars($page->page_subtitle) ?></h4>
+                    </div>
+                <?php endif; ?>
+                
+                <h2 class="header"><?= htmlspecialchars($page->title) ?></h2>
+                <br />
 
-// basic-page.php template file 
-// See README.txt for more information
+                <?php if ($page->lead_intro): ?>
+                    <div class="lead-intro description" style="font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+                        <?= nl2br(htmlspecialchars($page->lead_intro)) ?>
+                    </div>
+                <?php endif; ?>
 
-/** @var Page $page API variable */
-
-// Primary content is the page's body copy
-$content = $page->get('body'); 
-
-// If the page has children, then render navigation to them under the body.
-// See the _func.php for the renderNav example function.
-if($page->hasChildren) {
-	$content .= renderNav($page->children);
-}
-
-// if the rootParent (section) page has more than 1 child, then render 
-// section navigation in the sidebar
-if($page->rootParent->hasChildren > 1) {
-	$sidebar = renderNavTree($page->rootParent, 3) . $page->get('sidebar'); 
-}
-
+                <?php if ($page->content_blocks && count($page->content_blocks)): ?>
+                    <div class="content-sections">
+                        <?php foreach ($page->content_blocks as $block): ?>
+                            <div class="content-block-item" style="margin-bottom: 30px;">
+                                <?php if ($block->block_title): ?>
+                                    <h3 class="block-title" style="color: #2b3990; font-size: 20px; font-weight: 700; margin-bottom: 12px;">
+                                        <?= htmlspecialchars($block->block_title) ?>
+                                    </h3>
+                                <?php endif; ?>
+                                <?php if ($block->block_text): ?>
+                                    <div class="description" style="line-height: 1.8;">
+                                        <?= nl2br(htmlspecialchars($block->block_text)) ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
+    </div>
+</div>
+<?php
+include './includes/footer.inc.php';
+?>

@@ -1,0 +1,3 @@
+2026-09-28 11:01:42	guest	http://localhost/dypds/processwire/login/	Error: Failed login for 'admin' - Invalid password
+2026-09-28 11:01:50	admin	http://localhost/dypds/processwire/login/	Successful login for 'admin'
+2026-09-28 11:20:29	?	?	User 'admin' - Error: Session fingerprint changed (IP address or useragent) (IP: ::1)
