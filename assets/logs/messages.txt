@@ -1,0 +1,7 @@
+2026-09-28 10:43:33	guest	http://localhost/dypds/	Added 'filesize' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:33	guest	http://localhost/dypds/	Added 'created_users_id' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:34	guest	http://localhost/dypds/	Added 'modified_users_id' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:34	guest	http://localhost/dypds/	Added 'filedata' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:34	guest	http://localhost/dypds/	Added 'width' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:35	guest	http://localhost/dypds/	Added 'height' to DB schema for 'images' (FieldtypeImage)
+2026-09-28 10:43:35	guest	http://localhost/dypds/	Added 'ratio' to DB schema for 'images' (FieldtypeImage)
